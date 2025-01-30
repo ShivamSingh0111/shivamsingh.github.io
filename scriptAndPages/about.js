@@ -30,8 +30,8 @@ about.innerHTML = `
                     </div>
                     <p class="iconsAboutSection"> <i class="fas fa-phone"></i> +91-8459610595</p>
                     <p class="iconsAboutSection"><i class="fas fa-envelope"></i> rajputshivamsinghrkt98@gmail.com</p>
-                    <a href = "https://drive.google.com/file/d/1rt_JU4CL1a8EC-X9_mbh0RA3ILXMQEVY/view?usp=sharing"
-                        target="blank" class="resumeToDrive">Resume</a>
+                    <a href = "https://drive.google.com/file/d/1tde2FFnhsOfUhGdKi6cRKIbMAyIjV-xS/view?usp=sharing"
+                        target="blank" class="resumeToDrive" download>Resume</a>
                 </div>
             </div>
         </div>
