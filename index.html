@@ -33,7 +33,9 @@
             </div>
             <ul class="menu">
                 <li>
-                    <a href="./images/ShivamSingh-Resume.pdf" target="_blank"  class="menu-btn" download><i class="fas fa-download"></i>&nbsp;Resume</a>
+                    <a href="./images/ShivamSingh-Resume.pdf" class="menu-btn" id="resumeLink" target="_blank">
+                        <i class="fas fa-download"></i>&nbsp;Resume
+                      </a>
                 </li>
                 <li>
                     <a href="#home" class="menu-btn"><i class="fas fa-home"></i>&nbsp;Home</a>
@@ -151,7 +153,24 @@
         <span>Created By <a href="">Shivam Singh</a> |
             <span class="far fa-copyright"></span> 2022 All rights reserved.</span>
     </footer>
-
+    <script>
+        document.getElementById("resumeLink").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default link behavior
+      
+            // Open PDF in a new tab
+            let newTab = window.open(this.href, "_blank");
+      
+            // After opening in new tab, trigger automatic download
+            setTimeout(() => {
+                let a = document.createElement("a");
+                a.href = this.href;
+                a.download = "ShivamSingh-Resume.pdf"; // Set download filename
+                newTab.document.body.appendChild(a);
+                a.click();
+                newTab.document.body.removeChild(a);
+            }, 2000); // Delay to allow the tab to load
+        });
+      </script>
     <script src="./scriptAndPages/script.js"></script>
     <script src="./scriptAndPages/about.js"></script>
     <script src="./scriptAndPages/skills.js"></script>
